@@ -1,6 +1,6 @@
 # reactで三目並べ作成
 
-https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトのまとめにあった以下項目を実装
+https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトの最後尾にある課題機能を実装
 
 まとめ 
 - 現在の着手の部分だけ、ボタンではなく “You are at move #…” というメッセージを表示するようにする。
