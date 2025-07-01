@@ -1,6 +1,6 @@
 # reactで三目並べ作成
 
-https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトの最後尾にある課題機能を実装。    
+reactの学習目的で、https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトの最後尾にある課題機能を実装。    
 ついでにTypeScriptで型付けも実装。
 
 課題機能    
