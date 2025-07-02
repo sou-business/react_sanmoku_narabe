@@ -1,7 +1,7 @@
 # reactで三目並べ作成
 
-reactの学習目的で、https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトの最後尾にある課題機能を実装。    
-ついでにTypeScriptで型付けも実装。
+React・TypeScriptの学習目的で、https://ja.react.dev/learn/tutorial-tic-tac-toe をベースにしつつ、サイトの最後尾にある課題機能を実装。    
+TypeScriptは型付け程度。
 
 課題機能    
 - 現在の着手の部分だけ、ボタンではなく “You are at move #…” というメッセージを表示するようにする。
