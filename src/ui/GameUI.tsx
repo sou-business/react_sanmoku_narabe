@@ -2,10 +2,10 @@ import { ReactElement, useState } from "react";
 import * as PlayHistory from "../domain/model/PlayHistory"
 import * as Board from "../domain/model/Board";
 import * as GameService from "../domain/service/GameService";
-import * as BoardUI from "./BoardUI";
-import * as HistoryUI from "./HistoryUI";
+import { BoardUI } from "./BoardUI";
+import { HistoryUI } from "./HistoryUI";
 
-export function Game() {
+export function GameUI() {
   const [history, setHistory] = useState<PlayHistory.History>([
     { id: 0, squares: Array(9).fill(null), position: null }
   ]);
@@ -27,7 +27,7 @@ export function Game() {
   return (
     <div className="game">
       <div className="game-board">
-        <BoardUI.BoardUI 
+        <BoardUI 
         xIsNext={xIsNext}
         squares={currentSquares}
         onPlay={handlePlay}
@@ -35,7 +35,7 @@ export function Game() {
       </div>
       <div className="game-info">
         <ol><button onClick={() => sortChange()}>履歴ソート</button></ol>
-        <ol> <HistoryUI.HistoryUI
+        <ol> <HistoryUI
               currentMove={currentMove}
               history={history}
               sortASC={sortASC}

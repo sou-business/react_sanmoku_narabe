@@ -3,7 +3,7 @@ import * as BoardModel from '../domain/model/Board';
 import * as WinnerInfo from '../domain/model/WinnerInfo';
 import * as GameRules from '../domain/service/GameRule'
 import * as GameService from '../domain/service/GameService'
-import * as SquareUI from './SquareUI'
+import { SquareUI } from './SquareUI'
 
 export function BoardUI(propsBoard: BoardModel.Board) : React.JSX.Element {
 
@@ -27,7 +27,7 @@ export function BoardUI(propsBoard: BoardModel.Board) : React.JSX.Element {
       const index = row * ROW_SIZE + column;
       const highlightSquare = winnerInfo ? winnerInfo.winnerLine.includes(index) : false;
       squaresInRow.push(
-        <SquareUI.SquareUI 
+        <SquareUI 
           key = {index} 
           value={propsBoard.squares[index]} 
           onSquareClick={() => {
