@@ -1,9 +1,10 @@
 import * as Board from './Board';
+import * as Position from '../model/Position';
 
 export interface HistoryItem {
   id: number;
   squares: Board.Squares;
-  position: Board.NullableMovePosition;
+  position: Position.NullablePosition;
 }
 
 export type History = HistoryItem[];

@@ -5,3 +5,10 @@ export interface Square {
   onSquareClick: () => void;
   highlightSquare: boolean;
 }
+
+export interface MovePosition {
+  row: number;
+  column : number;
+}
+
+export type NullableMovePosition = MovePosition | null;

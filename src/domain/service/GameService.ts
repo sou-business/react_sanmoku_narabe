@@ -1,4 +1,5 @@
 import * as Board from '../model/Board';
+import * as Position from '../model/Position';
 import * as WinnerInfo from '../model/WinnerInfo';
 import * as PlayHistory from "../model/PlayHistory"
 
@@ -24,7 +25,7 @@ export function createNextPlayState(
   if (currentMove !== 0) {
     const updatedItem: PlayHistory.HistoryItem = {
       ...playHistory[currentMove],
-      position: Board.getMovePosition(history[currentMove - 1].squares, history[currentMove].squares)
+      position: getMovePosition(history[currentMove - 1].squares, history[currentMove].squares)
     };
     playHistory[currentMove] = updatedItem;
   }
@@ -39,4 +40,15 @@ export function createNextPlayState(
     updatedHistory: playHistory,
     nextMove: playHistory.length - 1
   };
+}
+
+export function getMovePosition(prevSquares:Board.Squares, currentSquares:Board.Squares): Position.NullablePosition {
+  for (let i = 0; i < currentSquares.length; i++) {
+    if (prevSquares[i] !== currentSquares[i]) {
+      const row:number = Math.floor(i / 3) + 1;
+      const column :number = (i % 3) + 1;
+      return { row, column};
+    }
+  }
+  return null;
 }
