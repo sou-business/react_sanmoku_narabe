@@ -15,4 +15,5 @@ TypeScriptは型付け程度。
 - TypeScirpt
 
 おまけ
-- ドメイン駆動設計入門を読んでみたので適用してみた。本来はフロントに活用するようなものでもないが、学習目的ということで良しとする
+- ドメイン駆動設計の適用   
+https://qiita.com/soujiro/items/bee90acf95656abaa1a7
